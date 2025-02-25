@@ -1,29 +1,23 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Image,
-} from "react-native";
-import { LinearGradient } from "expo-linear-gradient"; 
+import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router"; 
 import styles from "../styles/login_screen"; 
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   const handleLogin = () => {
     console.log("Logging in with:", email, password);
+    router.push("/HomeScreen"); // ✅ Navigate to HomeScreen
   };
 
   return (
     <LinearGradient colors={["#000000", "#1a1a1a"]} style={styles.container}>
       <View style={styles.logoContainer}>
-        <Image
-          source={require("../assets/LOGO_copy.png")} // ✅ Make sure this is a PNG/JPG
-          style={styles.logo}
-        />
+        <Image source={require("../assets/LOGO_copy.png")} style={styles.logo} />
         <Text style={styles.title}>ENGEZZ</Text>
         <Text style={styles.tagline}>NO CASH, NO HASSLE, JUST ENGEZZ</Text>
       </View>

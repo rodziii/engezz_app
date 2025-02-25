@@ -11,8 +11,8 @@ export default StyleSheet.create({
     marginBottom: 40,
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
     resizeMode: "contain",
   },
   title: {
@@ -23,7 +23,7 @@ export default StyleSheet.create({
   },
   tagline: {
     fontSize: 12,
-    color: "#888",
+    color: "#00aaff",
     marginTop: 5,
   },
   inputContainer: {
@@ -38,14 +38,14 @@ export default StyleSheet.create({
     fontSize: 16,
   },
   button: {
-    backgroundColor: "#666",
+    backgroundColor: "#fff",
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 8,
     marginTop: 20,
   },
   buttonText: {
-    color: "#fff",
+    color: "#00aaff",
     fontSize: 16,
     fontWeight: "bold",
   },
